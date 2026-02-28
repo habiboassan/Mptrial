@@ -1,17 +1,20 @@
-- title: Getting started
+- title: Campaign Priorities
   links:
-    - name: Components
-      link: /components/
-      summary: Reusable components
-    - name: Page templates
-      link: /templates/
-      summary: Details of the various page layouts
-    - name: News page
-      link: /news/
-      summary: An example news/blog page
-    - name: Configuration
-      link: /configuration/
-      summary: How to configure the site
-    - name: An example content page
-      link: /templates/content-page/
-      summary: An example content page displaying components
+    - name: Youth Empowerment
+      link: /priorities/youth/
+      summary: Expanding the Hustler Fund and vocational training for Kilifi South youth.
+    - name: The Blue Economy
+      link: /priorities/agriculture/
+      summary: Modernizing our local fishing industry and protecting coastal resources.
+    - name: Healthcare Access
+      link: /priorities/healthcare/
+      summary: Improving ward-level clinics and ensuring medicine is always available.
+    - name: Infrastructure Development
+      link: /priorities/infrastructure/
+      summary: Upgrading local roads and improving water access for every household.
+    - name: Education & Bursaries
+      link: /priorities/education/
+      summary: Fair and transparent distribution of CDF bursaries to keep our children in school.
+    - name: Women in Business
+      link: /priorities/women/
+      summary: Supporting Chamas and small businesses through targeted local initiatives.

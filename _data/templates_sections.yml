@@ -1,8 +1,11 @@
-- title: Templates
+- title: Campaign Portals
   links:
-    - name: Landing Page
-      link: /templates/landing-page/
-      summary: An example landing page
-    - name: Content Page
-      link: /templates/content-page/
-      summary: An example content page
+    - name: The 2027 Vision
+      link: /manifesto/
+      summary: A high-level overview of the #Mchakachaka2027 plan for Kilifi South.
+    - name: Detailed Policy Papers
+      link: /priorities/
+      summary: Deep dives into our Bottom-Up strategies for Agriculture, Youth, and Health.
+    - name: Campaign Newsroom
+      link: /news/
+      summary: Official statements, press releases, and updates from the campaign trail.

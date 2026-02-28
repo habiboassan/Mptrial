@@ -1,24 +1,24 @@
-- name: Accordion
-  link: /components/accordion/
-- name: Button
-  link: /components/button/
-- name: Contents
-  link: /components/contents/
-- name: File download
-  link: /components/file-download/
-- name: Hero image
-  link: /components/hero-image/
-- name: Image
-  link: /components/image/
-- name: Notification
-  link: /components/notification/
-- name: Phase banner
-  link: /components/phase-banner/
-- name: Popular links
-  link: /components/popular-links/
-- name: Site Wide Alert
-  link: /components/site-wide-alert/
-- name: Video
-  link: /components/video/
-- name: Warning text
-  link: /components/warning-text/
+- name: Meet Idd Mustafa
+  link: /about/
+- name: Full 2027 Manifesto
+  link: /manifesto/
+- name: Youth Empowerment Plan
+  link: /priorities/youth/
+- name: Agriculture & Farming
+  link: /priorities/agriculture/
+- name: Healthcare Initiatives
+  link: /priorities/healthcare/
+- name: Infrastructure Projects
+  link: /priorities/infrastructure/
+- name: Campaign News Updates
+  link: /news/
+- name: Volunteer for the Team
+  link: /volunteer/
+- name: Register to Vote
+  link: /vote-info/
+- name: Contact the Candidate
+  link: /contact/
+- name: Watch Campaign Videos
+  link: /videos/
+- name: Upcoming Town Halls
+  link: /events/

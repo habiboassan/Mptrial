@@ -1,7 +1,11 @@
-<div class="my-2 not-prose">
+<div class="my-4 not-prose">
   <a
-    href="{{ include.link }}"
-    class="bg-action-500 hover:bg-action-900 text-white px-4 py-2 rounded-md hover:underline no-underline inline-block active:text-white"
+    href="{{ include.link | relative_url }}"
+    class="bg-secondary hover:bg-primary text-hustlerBlack hover:text-white 
+           px-6 py-3 rounded-full font-extrabold uppercase tracking-wider 
+           shadow-lg hover:shadow-none transform hover:-translate-y-1 
+           transition-all duration-200 inline-block no-underline 
+           border-2 border-secondary hover:border-primary text-center min-w-[160px]"
   >
     {{ include.name }}
   </a>

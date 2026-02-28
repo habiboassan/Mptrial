@@ -1,12 +1,47 @@
 ---
 layout: default
 ---
-{% include popular-links.html %}
 
-<div
-  class="prose prose-lg prose-a:text-action-500 hover:prose-a:text-action-900 hover:prose-a:decoration-dotted"
->
-  {{ content }}
+<div class="max-w-[76rem] mx-auto px-4">
+  <header class="mb-12 border-b-8 border-secondary pb-8">
+    <h1 class="text-primary font-black text-4xl md:text-6xl uppercase tracking-tighter italic">
+      {{ page.title }}
+    </h1>
+    {% if page.description %}
+      <p class="text-xl md:text-2xl font-bold text-gray-600 mt-4 leading-relaxed max-w-3xl">
+        {{ page.description }}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.popular_links %}
+    <section class="mb-16">
+      {% include popular-links.html %}
+    </section>
+  {% endif %}
+
+  <div class="prose prose-xl max-w-none prose-headings:text-primary prose-strong:text-hustlerBlack prose-a:text-primary hover:prose-a:text-secondary mb-20">
+    {{ content }}
+  </div>
+
+  {% if page.sections %}
+    <section class="my-20 py-12 border-t border-gray-100">
+      <div class="flex items-center mb-10">
+        <span class="bg-secondary text-hustlerBlack font-black px-4 py-1 uppercase text-xs tracking-widest mr-4">
+          Priority Pillars
+        </span>
+        <h2 class="text-primary font-black text-3xl uppercase tracking-tighter">The Mustafa Plan</h2>
+      </div>
+      
+      {% include section-links.html %}
+    </section>
+  {% endif %}
+
+  <div class="bg-primary rounded-3xl p-8 md:p-12 text-center text-white shadow-2xl my-20">
+    <h3 class="text-3xl font-black uppercase mb-4 tracking-tight">Ready to join the movement?</h3>
+    <p class="text-lg mb-8 opacity-90 font-medium">Be part of the change in Kilifi South. Volunteer today.</p>
+    <div class="flex justify-center">
+      {% include button.html name="Become a Volunteer" link="/volunteer/" %}
+    </div>
+  </div>
 </div>
-
-{% if page.sections %} {% include section-links.html %} {% endif %}

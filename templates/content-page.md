@@ -13,7 +13,7 @@ To create a new content page, create a file, such as `my-new-page.md` and set `l
 
 ```yaml
 layout: page
-title: My new page
+title: Vote for IDD ABDULMAJID Vote for change
 ```
 
 ## Demo content

@@ -1,8 +1,12 @@
-title: Contents example
+title: "The #Mchakachaka2027 Roadmap"
 links:
-  - name: Overview
-    link: /components/contents/
-  - name: An example sub page
-    link: /components/contents/an-example-sub-page/
-  - name: Another example sub page
-    link: /components/contents/another-example-sub-page/
+  - name: "Vision for Kilifi South"
+    link: "/manifesto/overview/"
+  - name: "Economic Pillar"
+    link: "/manifesto/economy/"
+  - name: "Youth & Hustler Empowerment"
+    link: "/manifesto/youth-empowerment/"
+  - name: "Agriculture & Blue Economy"
+    link: "/manifesto/agriculture/"
+  - name: "Health & Social Security"
+    link: "/manifesto/social-services/"

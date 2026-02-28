@@ -25,6 +25,7 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x64-mingw-ucrt)
     ffi (1.17.0-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
@@ -32,6 +33,9 @@ GEM
     fiber-storage (0.1.2)
     forwardable-extended (2.6.0)
     google-protobuf (4.27.5-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.27.5-x64-mingw-ucrt)
       bigdecimal
       rake (>= 13)
     google-protobuf (4.27.5-x86_64-linux)
@@ -87,6 +91,8 @@ GEM
     mercenary (0.4.0)
     nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.18.9-x64-mingw-ucrt)
+      racc (~> 1.4)
     nokogiri (1.18.9-x86_64-linux-gnu)
       racc (~> 1.4)
     pathutil (0.16.2)
@@ -110,6 +116,8 @@ GEM
     safe_yaml (1.0.5)
     sass-embedded (1.77.8-arm64-darwin)
       google-protobuf (~> 4.26)
+    sass-embedded (1.77.8-x64-mingw-ucrt)
+      google-protobuf (~> 4.26)
     sass-embedded (1.77.8-x86_64-linux-gnu)
       google-protobuf (~> 4.26)
     terminal-table (3.0.2)
@@ -126,6 +134,7 @@ GEM
 PLATFORMS
   arm64-darwin-21
   arm64-darwin-23
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES

@@ -1,12 +1,28 @@
 <!doctype html>
 <html lang="en-GB">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ site.baseurl }}/assets/css/main.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}/assets/css/monokai.css" rel="stylesheet">
-    {% seo %}
-  </head>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1b5e20',    // UDA Green
+            secondary: '#ffd600',  // UDA Yellow
+            hustlerBlack: '#1a1a1a',
+          }
+        }
+      }
+    }
+  </script>
+
+  {% seo %}
+
+  <link href="{{ '/assets/css/monokai.css' | relative_url }}" rel="stylesheet">
+</head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     {% include cookie-banner.html %}

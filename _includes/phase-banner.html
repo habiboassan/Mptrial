@@ -1,16 +1,18 @@
 {% if site.phase and site.phase_link %}
-  <div
-    class="pb-4 mb-4 border-b-2 flex flex-row justify-start items-center text-sm"
-  >
-    <span class="mr-2 bg-action-500 text-white font-bold py-1 px-2">{{ site.phase }}</span>
-    <span
-      >This is a new service - your
+  <div class="bg-gray-50 border-b border-gray-100 py-3 mb-6 flex flex-row justify-start items-center text-xs md:text-sm px-4 rounded-b-lg">
+    <span class="mr-3 bg-secondary text-hustlerBlack font-black py-1 px-3 uppercase tracking-tighter rounded-sm shadow-sm">
+      {{ site.phase }}
+    </span>
+    
+    <span class="text-gray-600 font-medium">
+      This is the official <strong>#Mchakachaka2027</strong> portal. Help us serve Kilifi South better by 
       <a
-        href="{{ site.phase_link }}"
-        class="text-action-500 underline hover:decoration-dotted hover:text-action-900 py-2"
-        >feedback</a
+        href="{{ site.phase_link | relative_url }}"
+        class="text-primary font-bold underline decoration-secondary decoration-2 underline-offset-4 hover:text-secondary transition-colors"
       >
-      will help us to improve it.</span
-    >
+        sharing your feedback
+      </a> 
+      on our priorities.
+    </span>
   </div>
 {% endif %}

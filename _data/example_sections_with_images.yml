@@ -1,20 +1,21 @@
-- title: First section
+- title: Our Strategic Pillars
   links:
-    - name: Example Page
-      link: "#"
-      summary: An example landing page
-      image: https://picsum.photos/id/182/400/300
-    - name: Second Example page
-      link: "#"
-      summary: An example content page
-      image: https://picsum.photos/id/179/500/250
-- title: Second section
+    - name: Youth & Hustler Fund
+      link: /priorities/youth/
+      summary: Expanding access to credit and training for the youth of Kilifi South.
+      image: /assets/images/youth-empowerment.jpg
+    - name: Blue Economy & Fishing
+      link: /priorities/agriculture/
+      summary: Protecting our waters and empowering our local fishing communities.
+      image: /assets/images/coast-fishing.jpg
+
+- title: Campaign Highlights
   links:
-    - name: Example Page
-      link: "#"
-      summary: An example landing page
-      image: https://picsum.photos/id/191/700/350
-    - name: Second Example page
-      link: "#"
-      summary: An example content page
-      image: https://picsum.photos/id/199/600/300
+    - name: Meet the People
+      link: /news/town-hall-updates/
+      summary: Highlights from our recent town hall meetings across Kilifi South wards.
+      image: /assets/images/town-hall.jpg
+    - name: Join the Volunteer Team
+      link: /volunteer/
+      summary: Be the feet on the ground. Sign up to represent #Mchakachaka2027.
+      image: /assets/images/volunteer-team.jpg

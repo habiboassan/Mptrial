@@ -1,9 +1,13 @@
 items:
-  - name: Templates
-    link: /templates/
-  - name: Components
-    link: /components/
-  - name: News
+  - name: "Meet the Candidate"
+    link: /about/
+  - name: "Our Manifesto"
+    link: /manifesto/
+  - name: "Volunteer for #Mchakachaka"
+    link: /volunteer/
+  - name: "Latest News"
     link: /news/
-  - name: Cookie policy
-    link: /cookie-policy/
+  - name: "Privacy & Data Policy"
+    link: /privacy-policy/
+  - name: "Contact & Feedback"
+    link: /contact/

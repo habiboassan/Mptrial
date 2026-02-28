@@ -1,15 +1,21 @@
-<figure class="mb-4 shadow-md rounded-md">
-  <div
-    class="aspect-w-{{ include.width | default: 16 }} aspect-h-{{ include.height | default: 9 }} not-prose"
-  >
+<figure class="my-10 group">
+  <div class="relative p-1 bg-gradient-to-b from-primary via-primary to-secondary rounded-2xl shadow-xl overflow-hidden">
     <img
-      src="{{ include.image }}"
+      src="{{ include.src | relative_url }}"
       alt="{{ include.alt }}"
-      class="rounded-t-md w-full h-full object-center object-cover"
+      class="w-full h-auto rounded-xl object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+      loading="lazy"
     >
+    
+    <div class="absolute top-0 right-0 w-12 h-12 bg-secondary/20 rounded-bl-full"></div>
   </div>
 
   {% if include.caption %}
-    <figcaption class="pb-4 px-4">{{ include.caption }}</figcaption>
+    <figcaption class="mt-4 px-4 border-l-4 border-primary italic text-gray-700 text-sm md:text-base leading-relaxed">
+      <span class="font-black text-primary uppercase text-xs tracking-widest block not-italic mb-1">
+        #Mchakachaka2027 Update
+      </span>
+      {{ include.caption | markdownify | remove: '<p>' | remove: '</p>' }}
+    </figcaption>
   {% endif %}
 </figure>

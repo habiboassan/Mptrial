@@ -1,4 +1,8 @@
-- name: Landing page
-  link: /templates/landing-page/
-- name: Content page
-  link: /templates/content-page/
+- name: #Mchakachaka2027 Manifesto
+  link: /manifesto/
+- name: Kilifi South Priority Projects
+  link: /priorities/
+- name: Latest Campaign Updates
+  link: /news/
+- name: Join the Volunteer Team
+  link: /volunteer/

@@ -1,48 +1,31 @@
-<ul class="flex justify-start my-4">
-  <li class="mr-2">
-    <a
-      href="{{ site.baseurl }}/"
-      class="text-sm text-action-500 underline flex flex-nowrap items-center hover:decoration-dotted py-4"
-      ><span class="mr-2">Home</span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-5 h-5"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M8.25 4.5l7.5 7.5-7.5 7.5"
-        />
-      </svg>
-    </a>
-  </li>
-  {% for breadcrumb in page.breadcrumbs %}
-    <li class="mr-2">
-      <a
-        href="{{ site.baseurl }}{{ breadcrumb.link}}"
-        class="text-sm text-action-500 underline flex flex-nowrap items-center hover:decoration-dotted py-4"
-        ><span class="mr-2">{{ breadcrumb.name }}</span>
-        {% if forloop.last == false %}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
-          </svg>
-        {% endif %}
+<nav aria-label="Breadcrumb" class="my-4">
+  <ul class="flex items-center flex-wrap text-sm">
+    <li class="flex items-center">
+      <a href="{{ '/' | relative_url }}" 
+         class="text-primary font-bold hover:text-accent underline decoration-secondary decoration-2 underline-offset-4 flex items-center py-2 transition-colors">
+        <span>Home</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mx-2 text-gray-400">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
       </a>
     </li>
-  {% endfor %}
-</ul>
+
+    {% for breadcrumb in page.breadcrumbs %}
+      <li class="flex items-center">
+        {% if forloop.last %}
+          <span class="text-gray-600 py-2 font-medium" aria-current="page">
+            {{ breadcrumb.name }}
+          </span>
+        {% else %}
+          <a href="{{ breadcrumb.link | relative_url }}" 
+             class="text-primary font-bold hover:text-accent underline decoration-secondary decoration-2 underline-offset-4 flex items-center py-2 transition-colors">
+            <span>{{ breadcrumb.name }}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 mx-2 text-gray-400">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

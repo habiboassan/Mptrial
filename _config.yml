@@ -1,8 +1,12 @@
-title: LocalGovStatic
-description: An example static site built with Tailwind CSS
-url: "https://d3h9bp4584rx6.cloudfront.net"
+title: "Vote IDD ABDULMAJID Vote change"
+description: Your local voice for Kilifi South . Standing for change
+url: "https://github.com/habiboassan/Mptrial.git"
 baseurl: ""
 # logo_url: "/assets/images/path-to-logo.svg"
+
+twitter_username: "twitter_handle"
+facebook_username: "facebook_handle"
+instagram_username: "instagram_handle"
 
 copyright_name: Copyright name
 copyright_link: "/templates/content-page/"
@@ -13,7 +17,7 @@ copyright_link: "/templates/content-page/"
 #   message: This is an example of a site wide alert message with a [link](/components/site-wide-alert/).
 
 phase: ALPHA
-phase_link: https://github.com/FutureNorthants/LocalGovStatic/issues
+phase_link: https://github.com/habiboassan/Mptrial/issues/1
 
 livereload: true
 

@@ -1,7 +1,22 @@
-<div>
-  <h2>Latest news</h2>
+<section class="my-16">
+  <div class="flex items-center justify-between mb-8 border-b-4 border-secondary pb-2">
+    <h2 class="text-primary font-black uppercase tracking-tighter text-3xl md:text-4xl">
+      Campaign Dispatches
+    </h2>
+    <a href="{{ '/news/' | relative_url }}" class="hidden md:block text-primary font-bold hover:text-secondary transition-colors uppercase text-sm tracking-widest">
+      View All Updates &rarr;
+    </a>
+  </div>
 
-  {% for post in site.posts limit: 3 %}
-    {% include post-card.html %}
-  {% endfor %}
-</div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for post in site.posts limit: 3 %}
+      <div class="transform hover:-translate-y-2 transition-transform duration-300">
+        {% include post-card.html %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="mt-8 md:hidden">
+    {% include button.html name="Read All News" link="/news/" %}
+  </div>
+</section>

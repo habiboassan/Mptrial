@@ -1,14 +1,20 @@
 items:
-  - name: Components
-    link: /components/
-  - name: Templates
-    link: /templates/
+  - name: "Meet Mustafa"
+    link: /about/
+  - name: "Our Manifesto"
+    link: /manifesto/
     dropdown:
-      - name: Landing Page
-        link: /templates/landing-page/
-      - name: Content Page
-        link: /templates/content-page/
-  - name: Configuration
-    link: /configuration/
-  - name: News
+      - name: "Economic Transformation"
+        link:  /manifesto/
+      - name: "Youth & Hustler Fund"
+        link: /manifesto/
+      - name: "Blue Economy & Fishing"
+        link: /manifesto/
+      - name: "Healthcare & Social Security"
+        link: /manifesto/
+      - name: "Education & Bursaries"
+        link: /manifesto/
+  - name: "Kilifi South News"
     link: /news/
+  - name: "Join the Movement"
+    link: /volunteer/

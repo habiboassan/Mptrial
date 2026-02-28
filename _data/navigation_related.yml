@@ -1,10 +1,16 @@
-- name: Breadcrumbs
-  link: /components/breadcrumbs/
-- name: Footer links
-  link: /components/footer-links/
-- name: Main navigation
-  link: /components/main-navigation/
-- name: Related links
-  link: /components/related-links/
-- name: Section links
-  link: /components/section-links/
+- name: Meet Idd Mustafa
+  link: /about/
+- name: The 2027 Manifesto
+  link: /manifesto/
+- name: Youth & Hustler Fund
+  link:  /manifesto/
+- name: Blue Economy Initiatives
+  link: /manifesto/
+- name: Health & Social Services
+  link: /manifesto/
+- name: Education & Bursaries
+  link: /manifesto/
+- name: Get Involved / Volunteer
+  link: /volunteer/
+- name: Contact the Campaign
+  link: /contact/
