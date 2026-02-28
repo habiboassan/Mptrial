@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 title: "Idd Abdulmajid Mustafa | Kilifi South 2027"
 ---
 
