@@ -1,47 +1,42 @@
 ---
 layout: page
-title: "Jiunge na Harakati"
+title: "Jitolee (Volunteer)"
 permalink: /volunteer/
 ---
 
-<div class="max-w-2xl mx-auto">
-    <div class="bg-primary text-white p-8 rounded-t-2xl border-b-4 border-secondary text-center">
-        <h2 class="text-3xl font-black uppercase tracking-tighter">Kuwa Volunteer</h2>
-        <p class="mt-2 opacity-90">Be part of the change in Kilifi South. Sign up today!</p>
-    </div>
+<div class="bg-secondary text-hustlerBlack p-8 rounded-2xl mb-10 border-l-8 border-primary shadow-md">
+    <h2 class="text-3xl font-black uppercase tracking-tighter mb-2">Jiunge na Timu ya Ushindi!</h2>
+    <p class="text-lg font-medium opacity-90">Tunatafuta vijana na akina mama jasiri wa Kilifi South kusukuma gurudumu la maendeleo.</p>
+</div>
 
-    <form action="https://formspree.io/f/your-id-here" method="POST" class="bg-white p-8 rounded-b-2xl shadow-xl border-x border-b border-gray-100 text-black">
+<div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-3xl border-2 border-gray-100 shadow-sm">
+    <p class="mb-8 text-gray-700 text-center">Tafadhali jaza fomu hii. Timu yetu itakupigia simu hivi karibuni kupanga jinsi ya kuanza kazi.</p>
+
+    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="space-y-6">
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div>
-                <label class="block text-primary font-bold mb-2 uppercase text-xs">Jina Kamili (Full Name)</label>
-                <input type="text" name="name" required class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-secondary outline-none transition-all">
-            </div>
-            <div>
-                <label class="block text-primary font-bold mb-2 uppercase text-xs">Nambari ya Simu (Phone)</label>
-                <input type="tel" name="phone" required class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-secondary outline-none transition-all">
-            </div>
+        <div>
+            <label for="name" class="block text-sm font-bold text-primary mb-2">Jina Kamili (Full Name)</label>
+            <input type="text" id="name" name="name" required class="w-full rounded-xl border-2 border-gray-200 p-4 focus:border-secondary focus:ring-0 outline-none transition shadow-sm" placeholder="Mwananchi wa Kilifi South">
         </div>
 
-        <div class="mb-6">
-            <label class="block text-primary font-bold mb-2 uppercase text-xs">Email Address</label>
-            <input type="email" name="_replyto" required class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-secondary outline-none transition-all">
+        <div>
+            <label for="phone" class="block text-sm font-bold text-primary mb-2">Nambari ya Simu (Phone Number)</label>
+            <input type="tel" id="phone" name="phone" required class="w-full rounded-xl border-2 border-gray-200 p-4 focus:border-secondary focus:ring-0 outline-none transition shadow-sm" placeholder="07XX XXX XXX">
         </div>
 
-        <div class="mb-6">
-            <label class="block text-primary font-bold mb-2 uppercase text-xs">Ward Unayotoka (Your Ward)</label>
-            <select name="ward" class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-secondary outline-none transition-all">
-                <option>Mtwapa</option>
-                <option>Kikambala</option>
-                <option>Chonyi</option>
+        <div>
+            <label for="area" class="block text-sm font-bold text-primary mb-2">Wadi Unayoishi (Your Ward)</label>
+            <select id="area" name="area" class="w-full rounded-xl border-2 border-gray-200 p-4 focus:border-secondary focus:ring-0 outline-none transition shadow-sm bg-white">
                 <option>Junju</option>
                 <option>Mwarakaya</option>
-                <option>Other</option>
+                <option>Shasani</option>
+                <option>Chonyi</option>
+                <option>Kibarani</option>
             </select>
         </div>
 
-        <button type="submit" class="w-full bg-primary text-secondary py-4 rounded-xl font-black uppercase tracking-widest hover:bg-hustlerBlack transition-all shadow-lg">
-            Submit My Application
+        <button type="submit" class="w-full bg-primary text-secondary font-black text-2xl px-6 py-5 rounded-2xl hover:bg-hustlerBlack transition duration-300 shadow-xl border-b-4 border-secondary">
+            TUMA MAELEZO SASA
         </button>
     </form>
 </div>

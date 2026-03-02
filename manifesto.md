@@ -3,7 +3,8 @@ layout: page
 title: "Ilani ya #Mchakachaka2027"
 permalink: /manifesto/
 ---
-<img src="{{ '/assets/images/candidate-hero.jpg' | relative_url }}" alt="Idd Abdulmajid Mustafa" class="w-full max-h-[500px] object-cover rounded-2xl mb-8 shadow-xl border-4 border-secondary">
+
+<img src="{{ '/assets/images/candidate-hero.jpg' | relative_url }}" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl mb-8 shadow-xl border-4 border-secondary">
 
 <div class="bg-primary text-white p-8 rounded-2xl mb-12 border-b-8 border-secondary">
     <h1 class="text-4xl font-black uppercase tracking-tighter mb-4">Manifesto ya Idd Abdulmajid Mustafa</h1>
@@ -58,7 +59,7 @@ permalink: /manifesto/
 
 <div class="mt-12 p-8 bg-secondary/10 border-2 border-dashed border-primary rounded-2xl text-center">
     <h2 class="text-primary font-black text-2xl mb-4">Jiunge na Harakati Hizi!</h2>
-    <a href="/volunteer/" class="inline-block bg-primary text-secondary px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-hustlerBlack transition-colors">
+    <a href="/Mptrial/volunteer" class="inline-block bg-primary text-secondary px-8 py-3 rounded-full font-bold uppercase tracking-widest hover:bg-hustlerBlack transition-colors">
         Kuwa Volunteer
     </a>
 </div>
