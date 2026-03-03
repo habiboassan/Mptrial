@@ -20,33 +20,50 @@
   </script>
 
   {% seo %}
-
   <link href="{{ '/assets/css/monokai.css' | relative_url }}" rel="stylesheet">
 </head>
 <body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
   
-  <header class="bg-primary text-secondary p-4 shadow-lg">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-      <h1 class="text-2xl font-black uppercase tracking-tighter">#Mchakachaka2027</h1>
-      <nav class="flex flex-wrap gap-4 justify-center md:justify-end items-center">
-        <a href="/Mptrial/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Nyumbani</a>
-        <a href="/Mptrial/manifesto/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Ilani</a>
-        <a href="/Mptrial/videos/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Video</a>
-        <a href="/Mptrial/polling-stations/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Vituo vya Kura</a>
-        <a href="/Mptrial/volunteer/" class="px-4 py-2 font-black bg-secondary text-primary rounded-xl hover:bg-yellow-400 transition shadow-md">Jitolee</a>
+  <header class="bg-primary text-secondary p-4 shadow-lg sticky top-0 z-50" x-data="{ open: false }">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center">
+        <a href="/Mptrial/" class="text-2xl font-black uppercase tracking-tighter hover:text-white transition">#Mchakachaka2027</a>
+        
+        <button @click="open = !open" class="md:hidden text-secondary hover:text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <path x-show="open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden md:flex flex-wrap gap-4 items-center">
+          <a href="/Mptrial/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Nyumbani</a>
+          <a href="/Mptrial/manifesto/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Ilani</a>
+          <a href="/Mptrial/videos/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Video</a>
+          <a href="/Mptrial/polling-stations/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Vituo vya Kura</a>
+          <a href="/Mptrial/volunteer/" class="px-4 py-2 font-black bg-secondary text-primary rounded-xl hover:bg-yellow-400 transition shadow-md transform hover:scale-105">Jitolee</a>
+        </nav>
+      </div>
+
+      <nav x-show="open" x-transition class="md:hidden flex flex-col mt-4 space-y-2 pb-4 border-t border-white/20 pt-4">
+        <a href="/Mptrial/" class="block px-4 py-3 font-bold hover:bg-white/10 rounded-lg transition text-white">Nyumbani</a>
+        <a href="/Mptrial/manifesto/" class="block px-4 py-3 font-bold hover:bg-white/10 rounded-lg transition text-white">Ilani</a>
+        <a href="/Mptrial/videos/" class="block px-4 py-3 font-bold hover:bg-white/10 rounded-lg transition text-white">Video</a>
+        <a href="/Mptrial/polling-stations/" class="block px-4 py-3 font-bold hover:bg-white/10 rounded-lg transition text-white">Vituo vya Kura</a>
+        <a href="/Mptrial/volunteer/" class="block mt-4 px-4 py-4 font-black bg-secondary text-primary rounded-xl text-center shadow-lg text-lg">Jitolee (Volunteer)</a>
       </nav>
     </div>
   </header>
 
-  <main id="main-content" class="container mx-auto p-6 max-w-5xl flex-grow">
-    <div class="py-8">
+  <main id="main-content" class="container mx-auto p-4 md:p-6 max-w-5xl flex-grow">
+    <div class="py-4 md:py-8">
       {{ content }}
     </div>
   </main>
 
-  <footer class="bg-primary text-white pt-16 pb-8 mt-12 border-t-8 border-secondary shadow-inner">
+  <footer class="bg-primary text-white pt-12 md:pt-16 pb-8 mt-12 border-t-8 border-secondary shadow-inner">
     <div class="container mx-auto max-w-6xl px-6">
-      <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div class="grid md:grid-cols-3 gap-10 mb-12 text-center md:text-left">
         
         <div>
           <h3 class="text-3xl font-black text-secondary mb-4 uppercase tracking-tighter">Idd Mustafa</h3>
@@ -58,10 +75,10 @@
         <div>
           <h3 class="text-xl font-bold text-secondary mb-4 uppercase">Viungo Muhimu</h3>
           <ul class="space-y-3 opacity-90 font-medium text-lg">
-            <li><a href="/Mptrial/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Nyumbani</a></li>
-            <li><a href="/Mptrial/manifesto/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Ilani Yetu</a></li>
-            <li><a href="/Mptrial/polling-stations/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Vituo vya Kura</a></li>
-            <li><a href="/Mptrial/volunteer/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Jitolee (Volunteer)</a></li>
+            <li><a href="/Mptrial/" class="hover:text-secondary inline-block transition">Nyumbani</a></li>
+            <li><a href="/Mptrial/manifesto/" class="hover:text-secondary inline-block transition">Ilani Yetu</a></li>
+            <li><a href="/Mptrial/polling-stations/" class="hover:text-secondary inline-block transition">Vituo vya Kura</a></li>
+            <li><a href="/Mptrial/volunteer/" class="hover:text-secondary inline-block transition">Jitolee (Volunteer)</a></li>
           </ul>
         </div>
 
@@ -73,7 +90,7 @@
             <li>✉️ <strong>Barua Pepe:</strong> info@iddmustafa2027.com</li>
           </ul>
           
-          <div class="flex flex-wrap gap-3 mt-4">
+          <div class="flex flex-wrap gap-3 justify-center md:justify-start mt-4">
             <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">Facebook</a>
             <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">X (Twitter)</a>
             <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">Instagram</a>
