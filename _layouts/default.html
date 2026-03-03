@@ -23,29 +23,68 @@
 
   <link href="{{ '/assets/css/monokai.css' | relative_url }}" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-gray-50 text-gray-900 flex flex-col min-h-screen">
+  
   <header class="bg-primary text-secondary p-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
       <h1 class="text-2xl font-black uppercase tracking-tighter">#Mchakachaka2027</h1>
-      <nav>
-  <a href="/Mptrial/" class="px-3 py-2 font-bold hover:underline">Nyumbani</a>
-  <a href="/Mptrial/manifesto/" class="px-3 py-2 font-bold hover:underline text-secondary">Ilani</a>
-  <a href="/Mptrial/volunteer/" class="px-3 py-2 font-bold hover:underline">Jitolee</a>
-</nav>
-      
+      <nav class="flex flex-wrap gap-4 justify-center md:justify-end items-center">
+        <a href="{{ site.baseurl }}/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Nyumbani</a>
+        <a href="{{ site.baseurl }}/manifesto/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Ilani</a>
+        <a href="{{ site.baseurl }}/videos/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Video</a>
+        <a href="{{ site.baseurl }}/polling-stations/" class="px-3 py-2 font-bold hover:text-secondary transition text-white">Vituo vya Kura</a>
+        <a href="{{ site.baseurl }}/volunteer/" class="px-4 py-2 font-black bg-secondary text-primary rounded-xl hover:bg-yellow-400 transition shadow-md">Jitolee</a>
+      </nav>
     </div>
   </header>
 
-  <main id="main-content" class="container mx-auto p-6 max-w-5xl min-h-screen">
+  <main id="main-content" class="container mx-auto p-6 max-w-5xl flex-grow">
     <div class="py-8">
       {{ content }}
     </div>
   </main>
 
-  <footer class="bg-hustlerBlack text-white p-8 mt-12">
-    <div class="container mx-auto text-center">
-      <p class="font-bold">© 2026 Idd Abdulmajid Mustafa - Kilifi South</p>
-      <p class="text-sm opacity-60">Kazi iendelee. Maendeleo kwa Wote.</p>
+  <footer class="bg-primary text-white pt-16 pb-8 mt-12 border-t-8 border-secondary shadow-inner">
+    <div class="container mx-auto max-w-6xl px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        
+        <div>
+          <h3 class="text-3xl font-black text-secondary mb-4 uppercase tracking-tighter">Idd Mustafa</h3>
+          <p class="opacity-90 leading-relaxed text-lg">
+            Mgombea Ubunge Kilifi South 2027. Kazi iendelee kwa ajili ya Kilifi South yenye neema na maendeleo ya kweli. #Mchakachaka2027
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-secondary mb-4 uppercase">Viungo Muhimu</h3>
+          <ul class="space-y-3 opacity-90 font-medium text-lg">
+            <li><a href="{{ site.baseurl }}/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Nyumbani</a></li>
+            <li><a href="{{ site.baseurl }}/manifesto/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Ilani Yetu</a></li>
+            <li><a href="{{ site.baseurl }}/polling-stations/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Vituo vya Kura</a></li>
+            <li><a href="{{ site.baseurl }}/volunteer/" class="hover:text-secondary hover:translate-x-1 inline-block transition transform">Jitolee (Volunteer)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-secondary mb-4 uppercase">Wasiliana Nasi</h3>
+          <ul class="space-y-3 opacity-90 mb-6 text-lg">
+            <li>📍 <strong>Ofisi:</strong> Mtwapa, Kilifi South</li>
+            <li>📞 <strong>Simu:</strong> 07XX XXX XXX</li>
+            <li>✉️ <strong>Barua Pepe:</strong> info@iddmustafa2027.com</li>
+          </ul>
+          
+          <div class="flex flex-wrap gap-3 mt-4">
+            <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">Facebook</a>
+            <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">X (Twitter)</a>
+            <a href="#" target="_blank" class="bg-secondary text-primary font-black px-5 py-2 rounded-lg hover:bg-white hover:text-primary transition shadow-md">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center pt-8 border-t border-white/20 opacity-70 text-sm font-medium">
+        <p>&copy; 2026 Idd Abdulmajid Mustafa - Kilifi South. Haki zote zimehifadhiwa.</p>
+        <p class="mt-2">Kazi iendelee. Maendeleo kwa Wote.</p>
+      </div>
     </div>
   </footer>
 

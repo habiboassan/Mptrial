@@ -5,7 +5,7 @@ title: "Idd Abdulmajid Mustafa | Kilifi South 2027"
 
 <div class="flex flex-col md:flex-row items-center gap-8 mb-12 mt-8">
     <div class="md:w-1/2">
-        <img src="{{ '/assets/images/candidate-hero.jpg' | relative_url }}" alt="Idd Abdulmajid Mustafa" class="rounded-2xl shadow-2xl border-4 border-secondary w-full object-cover">
+        <img src="/Mptrial/assets/images/candidate-hero.jpg" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl shadow-xl border-4 border-secondary">
     </div>
     <div class="md:w-1/2 bg-primary text-white p-10 rounded-3xl border-b-8 border-secondary shadow-xl">
         <h1 class="text-5xl font-black uppercase tracking-tighter mb-4 text-secondary">#Mchakachaka2027</h1>
@@ -14,37 +14,39 @@ title: "Idd Abdulmajid Mustafa | Kilifi South 2027"
     </div>
 </div>
 
-## Dira Yetu (Our Vision)
-Tumejibu mwito wa wananchi wa Kilifi South kuleta maendeleo ya kweli kupitia nguzo zetu kuu za:
-* **Kilimo:** Kuimarisha ukulima wa kisasa na masoko kwa wakulima wetu.
-* **Afya:** Vituo vya afya vilivyo na dawa na wahudumu wa kutosha.
-* **Miundombinu:** Barabara safi zinazounganisha wadi zetu zote.
+<section class="prose max-w-none mb-16">
+    <h2 class="text-4xl font-black text-primary mb-6">Dira Yetu (Our Vision)</h2>
+    <p class="text-lg text-gray-700">Tumejibu mwito wa wananchi wa Kilifi South kuleta maendeleo ya kweli kupitia nguzo zetu kuu za:</p>
+    <ul class="grid md:grid-cols-3 gap-4 list-none p-0">
+        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-secondary shadow-sm"><strong>🌽 Kilimo:</strong> Kuimarisha ukulima wa kisasa na masoko kwa wakulima wetu.</li>
+        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-secondary shadow-sm"><strong>🏥 Afya:</strong> Vituo vya afya vilivyo na dawa na wahudumu wa kutosha.</li>
+        <li class="bg-gray-50 p-4 rounded-xl border-l-4 border-secondary shadow-sm"><strong>🏗️ Miundombinu:</strong> Barabara safi zinazounganisha wadi zetu zote.</li>
+    </ul>
+</section>
 
-*(Add the rest of your manifesto details here...)*
-
-<div class="bg-white p-8 rounded-3xl shadow-xl border-t-8 border-primary mt-12 mb-12">
-  <h2 class="text-3xl font-black text-primary mb-4">Jitolee Kwenye Kampeni (Volunteer)</h2>
-  <p class="text-lg mb-6 text-gray-600">Jiunge na timu ya #Mchakachaka2027. Weka maelezo yako hapa ili upate habari za mikutano na jinsi ya kusaidia kusukuma gurudumu la maendeleo Kilifi South.</p>
-
-  <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="space-y-5">
+<section class="mt-16 mb-16">
+    <h2 class="text-4xl font-black text-primary mb-8 border-b-4 border-secondary inline-block uppercase">Habari na Mikutano</h2>
     
-    <div>
-      <label for="name" class="block text-sm font-bold text-gray-800 mb-1">Jina Kamili (Full Name)</label>
-      <input type="text" id="name" name="name" required class="w-full rounded-xl border-2 border-gray-200 p-3 focus:border-primary focus:ring-0 outline-none transition" placeholder="Mwananchi Mzalendo">
+    <div class="grid md:grid-cols-2 gap-6">
+        {% for post in site.posts limit:4 %}
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-xl transition">
+            <div class="p-6">
+                <span class="text-sm font-bold text-secondary uppercase">{{ post.date | date: "%b %d, %Y" }}</span>
+                <h3 class="text-xl font-bold text-primary mt-2 mb-3">{{ post.title }}</h3>
+                <p class="text-gray-600 mb-4">{{ post.content | strip_html | truncatewords: 20 }}</p>
+                <a href="{{ post.url | relative_url }}" class="text-primary font-bold hover:underline">Soma Zaidi →</a>
+            </div>
+        </div>
+        {% else %}
+        <p class="text-gray-500 italic">Ratiba ya mikutano na taarifa mpya zitakuja hivi punde.</p>
+        {% endfor %}
     </div>
+</section>
 
-    <div>
-      <label for="phone" class="block text-sm font-bold text-gray-800 mb-1">Nambari ya Simu (Phone Number)</label>
-      <input type="tel" id="phone" name="phone" required class="w-full rounded-xl border-2 border-gray-200 p-3 focus:border-primary focus:ring-0 outline-none transition" placeholder="07XX XXX XXX">
-    </div>
-
-    <div>
-      <label for="email" class="block text-sm font-bold text-gray-800 mb-1">Barua Pepe (Email Address) - Hiari/Optional</label>
-      <input type="email" id="email" name="email" class="w-full rounded-xl border-2 border-gray-200 p-3 focus:border-primary focus:ring-0 outline-none transition" placeholder="jina@email.com">
-    </div>
-
-    <button type="submit" class="w-full bg-secondary text-hustlerBlack font-black text-xl px-6 py-4 rounded-xl hover:bg-yellow-400 transition duration-300 shadow-md">
-      Tuma Maelezo (Join the Team)
-    </button>
-  </form>
+<div class="mt-16 mb-12 text-center p-10 bg-primary rounded-3xl border-b-8 border-secondary shadow-2xl">
+    <h2 class="text-3xl font-black text-white mb-4 uppercase">Tayari kuleta mabadiliko?</h2>
+    <p class="text-white opacity-90 mb-8 text-lg">Jiunge na maelfu ya wakazi wa Kilifi South katika harakati za #Mchakachaka2027.</p>
+    <a href="/Mptrial/volunteer/" class="inline-block bg-secondary text-primary font-black text-xl px-10 py-5 rounded-2xl hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg">
+        JITOLEE SASA (VOLUNTEER) →
+    </a>
 </div>

@@ -4,7 +4,7 @@ title: "Ilani ya #Mchakachaka2027"
 permalink: /manifesto/
 ---
 
-<img src="{{ '/assets/images/candidate-hero.jpg' | relative_url }}" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl mb-8 shadow-xl border-4 border-secondary">
+<img src="/Mptrial/assets/images/candidate-hero.jpg" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl mb-8 shadow-xl border-4 border-secondary">
 
 <div class="bg-primary text-white p-8 rounded-2xl mb-12 border-b-8 border-secondary">
     <h1 class="text-4xl font-black uppercase tracking-tighter mb-4">Manifesto ya Idd Abdulmajid Mustafa</h1>
