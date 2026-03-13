@@ -5,7 +5,7 @@ title: "Idd Abdulmajid Mustafa | Kilifi South 2027"
 
 <div class="flex flex-col md:flex-row items-center gap-8 mb-12 mt-8">
     <div class="md:w-1/2">
-        <img src="/Mptrial/assets/images/candidate-hero.jpg" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl shadow-xl border-4 border-secondary">
+        <img src="/assets/images/candidate-hero.jpg" alt="Idd Abdulmajid Mustafa" class="w-full h-auto rounded-2xl shadow-xl border-4 border-secondary">
     </div>
     <div class="md:w-1/2 bg-primary text-white p-10 rounded-3xl border-b-8 border-secondary shadow-xl">
         <h1 class="text-5xl font-black uppercase tracking-tighter mb-4 text-secondary">#Mchakachaka2027</h1>
@@ -46,7 +46,7 @@ title: "Idd Abdulmajid Mustafa | Kilifi South 2027"
 <div class="mt-16 mb-12 text-center p-10 bg-primary rounded-3xl border-b-8 border-secondary shadow-2xl">
     <h2 class="text-3xl font-black text-white mb-4 uppercase">Tayari kuleta mabadiliko?</h2>
     <p class="text-white opacity-90 mb-8 text-lg">Jiunge na maelfu ya wakazi wa Kilifi South katika harakati za #Mchakachaka2027.</p>
-    <a href="/Mptrial/volunteer/" class="inline-block bg-secondary text-primary font-black text-xl px-10 py-5 rounded-2xl hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg">
+    <a href="/volunteer/" class="inline-block bg-secondary text-primary font-black text-xl px-10 py-5 rounded-2xl hover:bg-yellow-400 transition transform hover:scale-105 shadow-lg">
         JITOLEE SASA (VOLUNTEER) →
     </a>
 </div>

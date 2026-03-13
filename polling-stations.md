@@ -55,6 +55,6 @@ permalink: /polling-stations/
     <span class="text-3xl">ℹ️</span>
     <div>
         <h4 class="font-bold text-blue-900">Je, unahitaji usafiri?</h4>
-        <p class="text-blue-800">Kama unahitaji msaada wa usafiri kufika kituoni siku ya kura, tafadhali wasiliana na timu yetu kupitia ukurasa wa <a href="/Mptrial/volunteer/" class="underline font-bold">Jitolee</a>.</p>
+        <p class="text-blue-800">Kama unahitaji msaada wa usafiri kufika kituoni siku ya kura, tafadhali wasiliana na timu yetu kupitia ukurasa wa <a href="/volunteer/" class="underline font-bold">Jitolee</a>.</p>
     </div>
 </div>
