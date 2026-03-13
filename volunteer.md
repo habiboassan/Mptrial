@@ -12,8 +12,16 @@ permalink: /volunteer/
 <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-3xl border-2 border-gray-100 shadow-sm">
     <p class="mb-8 text-gray-700 text-center">Tafadhali jaza fomu hii. Timu yetu itakupigia simu hivi karibuni kupanga jinsi ya kuanza kazi.</p>
 
-    <form action="YOUR_FORMSPREE_LINK_HERE" method="POST" class="space-y-6">
+    <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
         
+        <input type="hidden" name="access_key" value="ec461c97-bc6b-4640-be09-9137bbf3e26b">
+
+        <input type="hidden" name="subject" value="Mchakachaka2027: Mpiga Kura Mpya amejitolea!">
+
+        <input type="hidden" name="redirect" value="https://habiboassan.github.io/Mptrial/">
+
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
         <div>
             <label for="name" class="block text-sm font-bold text-primary mb-2">Jina Kamili (Full Name)</label>
             <input type="text" id="name" name="name" required class="w-full rounded-xl border-2 border-gray-200 p-4 focus:border-secondary focus:ring-0 outline-none transition shadow-sm" placeholder="Mwananchi wa Kilifi South">
