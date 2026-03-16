@@ -37,9 +37,9 @@ permalink: /volunteer/
             <select id="area" name="area" class="w-full rounded-xl border-2 border-gray-200 p-4 focus:border-secondary focus:ring-0 outline-none transition shadow-sm bg-white">
                 <option>Junju</option>
                 <option>Mwarakaya</option>
-                <option>Shasani</option>
-                <option>Chonyi</option>
-                <option>Kibarani</option>
+                <option>Chasimba</option>
+                <option>Mtepeni</option>
+                <option>Shimo la Tewa</option>
             </select>
         </div>
 
