@@ -4,45 +4,43 @@ title: "Vituo vya Kura (Polling Stations)"
 permalink: /polling-stations/
 ---
 
-<div class="bg-primary text-secondary p-10 rounded-3xl mb-10 shadow-2xl border-b-8 border-secondary text-center">
-    <h1 class="text-4xl font-black uppercase tracking-tighter mb-4">Tafuta Mahali Pako</h1>
-    <p class="text-xl text-white opacity-95">Andika jina la Ward yako au Kijiji chako kupata kituo cha karibu.</p>
+<div style="background: #1b5e20; color: #ffd600; padding: 30px; border-radius: 20px; margin-bottom: 30px; text-align: center; border-bottom: 5px solid #ffd600;">
+    <h1 style="font-weight: 900; text-transform: uppercase; margin: 0;">Tafuta Mahali Pako</h1>
+    <p style="color: white; margin-top: 10px;">Andika jina la Ward yako au Kijiji chako kupata kituo cha karibu.</p>
 </div>
 
-<div class="max-w-3xl mx-auto mb-12">
-    <div class="relative">
-        <input type="text" id="stationSearch" onkeyup="filterTable()" 
-               placeholder="Unatoka wapi? (Mfano: Junju, Mtwapa, Mtepeni...)" 
-               class="w-full p-6 text-2xl rounded-2xl border-4 border-primary focus:border-secondary outline-none shadow-lg transition-all font-bold text-primary">
-        <div class="absolute right-6 top-6 text-primary opacity-30">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-        </div>
-    </div>
+<div style="margin-bottom: 25px;">
+    <input type="text" id="stationSearch" onkeyup="filterTable()" 
+           placeholder="Unatoka wapi? (Mfano: Junju, Mtwapa, Mtepeni...)" 
+           style="width: 100%; padding: 18px; font-size: 18px; border: 3px solid #1b5e20; border-radius: 15px; outline: none; box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-weight: bold; color: #1b5e20;">
 </div>
 
-<div id="noResults" class="hidden text-center py-10">
-    <p class="text-2xl font-bold text-gray-400 italic">Pole, hatujapata kituo hicho. Jaribu tena...</p>
+<div id="noResults" style="display: none; text-align: center; padding: 40px;">
+    <p style="font-size: 20px; color: #999; font-style: italic;">Pole, hatujapata kituo hicho. Jaribu tena...</p>
 </div>
 
-<div class="overflow-x-auto bg-white rounded-3xl shadow-2xl border border-gray-100">
-    <table id="stationsTable" class="w-full text-left border-collapse">
+<div style="overflow-x: auto; background: white; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+    <table id="stationsTable" style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
-            <tr class="bg-primary text-secondary uppercase text-sm tracking-widest">
-                <th class="p-6 border-b-2 border-secondary">Wadi (Ward)</th>
-                <th class="p-6 border-b-2 border-secondary">Kituo cha Usajili (Centre)</th>
-                <th class="p-6 border-b-2 border-secondary text-center">Wapiga Kura</th>
+            <tr style="background: #1b5e20; color: #ffd600; text-transform: uppercase; font-size: 13px;">
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Wadi (Ward)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Kituo (Centre)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600; text-align: center;">Wapiga Kura</th>
             </tr>
         </thead>
-        <tbody class="divide-y divide-gray-100">
-            {% if site.data.stations %}
-                {% for row in site.data.stations %}
-                <tr class="station-row hover:bg-yellow-50 transition-colors">
-                    <td class="p-6 font-bold text-primary">{{ row.CAW_Name }}</td>
-                    <td class="p-6 font-medium text-gray-800">{{ row.Reg_Centre_Name }}</td>
-                    <td class="p-6 text-center">
-                        <span class="bg-secondary text-primary font-black px-4 py-2 rounded-full text-sm">
+        <tbody style="font-size: 16px;">
+            {% comment %} 
+               Try to find data in 'stations' (lowercase) or 'Stations' (Capital) 
+            {% endcomment %}
+            {% assign data_source = site.data.stations | default: site.data.Stations %}
+
+            {% if data_source %}
+                {% for row in data_source %}
+                <tr style="border-bottom: 1px solid #f0f0f0;" class="station-row">
+                    <td style="padding: 18px; font-weight: bold; color: #1b5e20;">{{ row.CAW_Name }}</td>
+                    <td style="padding: 18px; color: #333; font-weight: 500;">{{ row.Reg_Centre_Name }}</td>
+                    <td style="padding: 18px; text-align: center;">
+                        <span style="background: #ffd600; color: #1b5e20; font-weight: 900; padding: 5px 15px; border-radius: 20px; font-size: 14px;">
                             {{ row.Total_Registered_Voters }}
                         </span>
                     </td>
@@ -50,8 +48,9 @@ permalink: /polling-stations/
                 {% endfor %}
             {% else %}
                 <tr>
-                    <td colspan="3" class="p-20 text-center text-red-500 font-black text-xl uppercase">
-                        Data Isiyopatikana!
+                    <td colspan="3" style="padding: 50px; text-align: center; color: #e53935; font-weight: bold;">
+                        Data Isiyopatikana! <br>
+                        <small style="color: #999;">Hakikisha faili limeitwa 'stations.csv' ndani ya folder la '_data'</small>
                     </td>
                 </tr>
             {% endif %}
@@ -61,15 +60,15 @@ permalink: /polling-stations/
 
 <script>
 function filterTable() {
-    const input = document.getElementById("stationSearch");
-    const filter = input.value.toUpperCase();
-    const table = document.getElementById("stationsTable");
-    const tr = table.getElementsByClassName("station-row");
-    const noResults = document.getElementById("noResults");
-    let count = 0;
+    var input = document.getElementById("stationSearch");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("stationsTable");
+    var tr = table.getElementsByClassName("station-row");
+    var noResults = document.getElementById("noResults");
+    var count = 0;
 
-    for (let i = 0; i < tr.length; i++) {
-        const rowText = tr[i].textContent || tr[i].innerText;
+    for (var i = 0; i < tr.length; i++) {
+        var rowText = tr[i].textContent || tr[i].innerText;
         if (rowText.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
             count++;
@@ -78,13 +77,12 @@ function filterTable() {
         }
     }
 
-    // Show table or 'No Results' message
     if (count === 0 && filter !== "") {
         table.style.display = "none";
-        noResults.classList.remove("hidden");
+        noResults.style.display = "block";
     } else {
         table.style.display = "table";
-        noResults.classList.add("hidden");
+        noResults.style.display = "none";
     }
 }
 </script>
