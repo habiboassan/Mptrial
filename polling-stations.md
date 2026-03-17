@@ -6,7 +6,7 @@ permalink: /polling-stations/
 
 <div style="background: #1b5e20; color: #ffd600; padding: 30px; border-radius: 20px; margin-bottom: 30px; text-align: center; border-bottom: 5px solid #ffd600;">
     <h1 style="font-weight: 900; text-transform: uppercase; margin: 0;">Tafuta Mahali Pako</h1>
-    <p style="color: white; margin-top: 10px;">Andika jina la Ward yako au Kijiji chako kupata kituo cha karibu.</p>
+    <p style="color: white; margin-top: 10px;">Andika Wadi yako au Kituo kupata idadi ya wapiga kura.</p>
 </div>
 
 <div style="margin-bottom: 25px;">
@@ -23,25 +23,26 @@ permalink: /polling-stations/
     <table id="stationsTable" style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
             <tr style="background: #1b5e20; color: #ffd600; text-transform: uppercase; font-size: 13px;">
-                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Wadi (Ward)</th>
-                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Kituo (Centre)</th>
-                <th style="padding: 20px; border-bottom: 2px solid #ffd600; text-align: center;">Wapiga Kura</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600; width: 30%;">Wadi (Ward)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600; width: 50%;">Kituo (Centre)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600; text-align: center; width: 20%;">Idadi</th>
             </tr>
         </thead>
         <tbody style="font-size: 16px;">
-            {% comment %} 
-               Try to find data in 'stations' (lowercase) or 'Stations' (Capital) 
-            {% endcomment %}
             {% assign data_source = site.data.stations | default: site.data.Stations %}
 
             {% if data_source %}
                 {% for row in data_source %}
                 <tr style="border-bottom: 1px solid #f0f0f0;" class="station-row">
-                    <td style="padding: 18px; font-weight: bold; color: #1b5e20;">{{ row.CAW_Name }}</td>
-                    <td style="padding: 18px; color: #333; font-weight: 500;">{{ row.Reg_Centre_Name }}</td>
+                    <td style="padding: 18px; font-weight: bold; color: #1b5e20;">
+                        {{ row.CAW_Name | default: row.caw_name | default: row["CAW_Name"] }}
+                    </td>
+                    <td style="padding: 18px; color: #333; font-weight: 500;">
+                        {{ row.Reg_Centre_Name | default: row.reg_centre_name | default: row["Reg_Centre_Name"] }}
+                    </td>
                     <td style="padding: 18px; text-align: center;">
                         <span style="background: #ffd600; color: #1b5e20; font-weight: 900; padding: 5px 15px; border-radius: 20px; font-size: 14px;">
-                            {{ row.Total_Registered_Voters }}
+                            {{ row.Total_Registered_Voters | default: row.total_registered_voters | default: row["Total_Registered_Voters"] }}
                         </span>
                     </td>
                 </tr>
@@ -49,8 +50,7 @@ permalink: /polling-stations/
             {% else %}
                 <tr>
                     <td colspan="3" style="padding: 50px; text-align: center; color: #e53935; font-weight: bold;">
-                        Data Isiyopatikana! <br>
-                        <small style="color: #999;">Hakikisha faili limeitwa 'stations.csv' ndani ya folder la '_data'</small>
+                        Data haipatikani.
                     </td>
                 </tr>
             {% endif %}
@@ -68,7 +68,8 @@ function filterTable() {
     var count = 0;
 
     for (var i = 0; i < tr.length; i++) {
-        var rowText = tr[i].textContent || tr[i].innerText;
+        // This line grabs ALL text in the row to make sure Ward, Centre, and Numbers are searchable
+        var rowText = tr[i].innerText || tr[i].textContent;
         if (rowText.toUpperCase().indexOf(filter) > -1) {
             tr[i].style.display = "";
             count++;
