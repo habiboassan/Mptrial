@@ -1,57 +1,62 @@
 ---
 layout: page
-title: "Vituo vya Kura (Polling Stations)"
+title: "Vituo vya Kura"
 permalink: /polling-stations/
 ---
 
-<div class="bg-primary text-secondary p-8 rounded-2xl mb-10 shadow-lg">
-    <h2 class="text-3xl font-black uppercase mb-2">Tafuta Kituo Chako</h2>
-    <p class="text-white opacity-90">Tafuta jina la kituo chako hapa chini.</p>
+<div style="background: #1b5e20; color: #ffd600; padding: 30px; border-radius: 20px; margin-bottom: 30px; text-align: center; border-bottom: 5px solid #ffd600;">
+    <h1 style="font-weight: 900; text-transform: uppercase; margin: 0; letter-spacing: -1px;">Vituo vya Kura (Kilifi South)</h1>
+    <p style="color: white; margin-top: 10px; font-weight: 500;">Tafuta kituo chako cha usajili na idadi ya wapiga kura.</p>
 </div>
 
-<div class="mb-8">
-    <input type="text" id="stationSearch" onkeyup="filterStations()" placeholder="Andika jina la kituo au wadi (e.g. Junju)..." class="w-full p-5 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-lg shadow-md font-bold text-primary">
+<div style="margin-bottom: 25px;">
+    <input type="text" id="stationSearch" onkeyup="filterTable()" placeholder="Andika jina la Wadi au Kituo (mfano: Mtwapa)..." 
+        style="width: 100%; padding: 18px; font-size: 18px; border: 3px solid #1b5e20; border-radius: 15px; outline: none; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
 </div>
 
-<div class="overflow-x-auto bg-white rounded-2xl shadow-xl border border-gray-200">
-    <table class="w-full text-left border-collapse" id="stationsTable">
+<div style="overflow-x: auto; background: white; border-radius: 20px; shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid #eee;">
+    <table id="stationsTable" style="width: 100%; border-collapse: collapse; text-align: left;">
         <thead>
-            <tr class="bg-primary text-secondary uppercase text-sm">
-                <th class="p-4">Wadi (Ward)</th>
-                <th class="p-4">Jina la Kituo (Station)</th>
-                <th class="p-4">Wapiga Kura</th>
+            <tr style="background: #1b5e20; color: #ffd600; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;">
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Wadi (Ward)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600;">Kituo (Centre)</th>
+                <th style="padding: 20px; border-bottom: 2px solid #ffd600; text-align: center;">Wapiga Kura</th>
             </tr>
         </thead>
-        <tbody class="divide-y divide-gray-100">
+        <tbody style="font-size: 16px;">
             {% if site.data.stations %}
-              {% for station in site.data.stations %}
-              <tr class="hover:bg-yellow-50 transition">
-                  <td class="p-4 font-bold text-primary">{{ station["Caw_ Name"] }}</td>
-                  <td class="p-4 text-gray-800">{{ station["Polling_ Station_ Name"] }}</td>
-                  <td class="p-4 font-black text-gray-600">{{ station["Registered_ Voters"] }}</td>
-              </tr>
-              {% endfor %}
+                {% for row in site.data.stations %}
+                <tr style="border-bottom: 1px solid #f0f0f0;" class="station-row">
+                    <td style="padding: 18px; font-weight: bold; color: #1b5e20;">{{ row.CAW_Name }}</td>
+                    <td style="padding: 18px; color: #333; font-weight: 500;">{{ row.Reg_Centre_Name }}</td>
+                    <td style="padding: 18px; font-weight: 900; color: #444; text-align: center; background: #fffde7;">{{ row.Total_Registered_Voters }}</td>
+                </tr>
+                {% endfor %}
             {% else %}
-              <tr>
-                  <td colspan="3" class="p-10 text-center text-red-500 font-bold">
-                      Data haijapatikana. Hakikisha 'stations.csv' ipo ndani ya folder la '_data'.
-                  </td>
-              </tr>
+                <tr>
+                    <td colspan="3" style="padding: 50px; text-align: center; color: #e53935; font-weight: bold;">
+                        Haikuweza kusoma data. Tafadhali hakikisha file limeitwa 'stations.csv' ndani ya folder la '_data'.
+                    </td>
+                </tr>
             {% endif %}
         </tbody>
     </table>
 </div>
 
 <script>
-function filterStations() {
-  const input = document.getElementById("stationSearch");
-  const filter = input.value.toUpperCase();
-  const table = document.getElementById("stationsTable");
-  const tr = table.getElementsByTagName("tr");
+function filterTable() {
+    var input = document.getElementById("stationSearch");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("stationsTable");
+    var tr = table.getElementsByTagName("tr");
 
-  for (let i = 1; i < tr.length; i++) {
-    let rowContent = tr[i].textContent || tr[i].innerText;
-    tr[i].style.display = rowContent.toUpperCase().indexOf(filter) > -1 ? "" : "none";
-  }
+    for (var i = 1; i < tr.length; i++) {
+        var rowText = tr[i].textContent || tr[i].innerText;
+        if (rowText.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
 }
 </script>
